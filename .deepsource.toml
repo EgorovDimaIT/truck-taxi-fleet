@@ -1,15 +1,25 @@
 version = 1
 
+exclude_patterns = [
+  "**/node_modules/**",
+  "**/vendor/**",
+  "**/dist/**",
+  "**/build/**",
+  "**/public/**",
+  "**/coverage/**",
+  "**/*.min.js",
+  "**/*.bundle.js",
+  "fleetbase/api/**",
+  "fleetbase/infra/**",
+  "fleetbase/docker/**"
+]
+
 [[analyzers]]
 name = "javascript"
 enabled = true
 
   [analyzers.meta]
   environment = ["nodejs"]
-
-[[analyzers]]
-name = "php"
-enabled = true
 
 [[transformers]]
 name = "prettier"

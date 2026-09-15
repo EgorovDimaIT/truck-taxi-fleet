@@ -1,5 +1,9 @@
 name: "Custom CodeQL config"
 
+paths:
+  - 'fleetbase/console'
+  - 'fleetbase/packages'
+
 paths-ignore:
   - '**/node_modules'
   - '**/vendor'
