@@ -1,0 +1,17 @@
+# Ignore node_modules, Python cache, and vendor directories
+node_modules/
+vendor/
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
+dist/
+build/
+coverage/
+.vscode/
+.idea/
+tmp/
+temp/
+logs/
+*.log

@@ -1,0 +1,54 @@
+# pack-refs with: peeled fully-peeled sorted 
+ec412c56887df0ae5f368cc93e94f14077b3f805 refs/remotes/origin/app/dosh-on-dev-v2.0.9
+4bf0f4f175f70767609d5d775d9e96bc0b11a0e3 refs/remotes/origin/app/fleetbase
+a717ef506f2fa2527318dc382477bf30e00e0760 refs/remotes/origin/app/gigmodal
+8981a868ed836162ad3c94310ff4774327a621a7 refs/remotes/origin/app/routetrail
+781261606682c1f2c1de5619abdfa27e71654216 refs/remotes/origin/chore/ai-agent-groundwork
+ebe76bd159d9720c98eca7eaa69d77c316d3b8f8 refs/remotes/origin/cleanup-v2-release
+54827e0b8115d1f198600a1ee048f35ec53e08d9 refs/remotes/origin/dev-v2.0.10
+89825acd4d69bd94916964bdac29fbaa2ba951eb refs/remotes/origin/dev-v2.0.5
+f327083af7e7b5e25cdc3ec75584bb4f628ad0f8 refs/remotes/origin/dev-v2.0.6
+2df6f63e473f0f7739c76a6bd88e43c44b50a6a2 refs/remotes/origin/dev-v2.0.7
+542fcfdacf450b5f9bb3820eac1d910301ab62df refs/remotes/origin/dev-v2.0.8
+39298f4fefc1900797ddefc33d16f6d5aa91b5b2 refs/remotes/origin/feature/android-12-below-compat
+fe2e97c0f96f0078b160a32f9ed641a4646d7915 refs/remotes/origin/feature/handle-chat-notifications-and-receipts
+6da469c3ca9b8465be3e0bb5abaf294b8d367fba refs/remotes/origin/feature/i18n-implementation
+aae27d75faf6c97b7662aa1d40d42c7c46d1bd33 refs/remotes/origin/feature/upgrade-react-native-0.76.1
+510f531b5aed1227bd453c1ee5c3b4acb14da0ec refs/remotes/origin/feature/v3-redesign
+52dae000e8844757a22663507a358d3bf57667f4 refs/remotes/origin/hotfix/android-auth-verify-code
+37af1ee7dfdcc53052058edd853c66400d3e7e32 refs/remotes/origin/main
+d79864db613e6dc1ab02dff93538e18552d74bad refs/remotes/origin/patch-release-workflow
+d16e26a0255c14573466dc3fb921db8e6e2261b6 refs/remotes/origin/patch/fix-android-notifications
+d7fb5d1b5645f08664d03266f609f0adff4d55e2 refs/remotes/origin/patch/profile-release
+bf7f30f36a59e5755fe7a3dbb42b0c61bc03e7c9 refs/remotes/origin/patch/strings-res
+3f1c68a6fa805b2724c4152a92f5fc630899743b refs/tags/v1.1.11
+162881b438ca39d734b6831fd812cc1f09534d05 refs/tags/v1.1.15
+^b5d8728110b5118455f006bb6a8fd0568df9aa23
+73f26b5600d9f17bac96796bfdf392b6e33c69f6 refs/tags/v1.1.16
+5096ddac9f1f68be6efda2ec592529cbee230248 refs/tags/v1.1.18
+aec4c5f393d67ecc7f7b400174f07a4fa1a2bdf6 refs/tags/v1.1.7
+ae2af3417b80854d46d5cbaec36d8592aad80eb6 refs/tags/v1.1.9
+4a13fc33b3e325d487d2a18ebab354c61135d75d refs/tags/v2.0.0
+^8bde3ccd3f0c2f44702f1754238163301d6f1cf7
+4d9ad142be5798b39ba2eb0b9b85ccf9afb49d25 refs/tags/v2.0.1
+^2d0111e5b54a03064ba3d49343171e78fce95d7d
+e4eab3dc4deae4fb9415e940411b11af1641fb70 refs/tags/v2.0.10
+^36292d369f4a314381db21985a82526d9eaefef3
+9f59b9b401581941272583f2065202aff7d6f7f9 refs/tags/v2.0.11
+^430793ef4d8ac885cd6fb145cfadd658855fe442
+cd726683271d78f07e5a6c4d0e05e017b334233d refs/tags/v2.0.2
+^fe2e97c0f96f0078b160a32f9ed641a4646d7915
+99cc3968b48aee035c472cfa6d519ee9fd741030 refs/tags/v2.0.3
+^b48013b9a75ec3548a9868478b118269310e76b6
+245bea9fb732510ac985b994fc87dce6f5f1a2da refs/tags/v2.0.4
+^ecf2fe4a1ad754e5834e4d1b5c09bd51cafc82e9
+ad5e2bea778895e01c435a6face24aab565ea5c3 refs/tags/v2.0.5
+^7aecfc7379bb8caa04477b852015930a44b60753
+325977124c52479728c782dc003e3676192920a1 refs/tags/v2.0.6
+^6b7b132aeed13532591f861e3c7d8805e89f768f
+580b3e423ddc873d5e158c1b1b9b83bfc1ee04ad refs/tags/v2.0.7
+^52ae35c94812813716f10dad244727148dc96eb8
+39b1a0dde388411e587b63a45e38f839664610bb refs/tags/v2.0.8
+^d849fc63ef03db37b17bcdcd003c9a6d14388b2d
+7dde41c3467647adf56932f197e355b9b2a38f82 refs/tags/v2.0.9
+^abef987400c0546a7afb1ee2971ed0f0d13062fd
