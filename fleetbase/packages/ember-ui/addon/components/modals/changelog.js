@@ -19,7 +19,7 @@ export default class ModalsChangelogComponent extends Component {
             .then((response) => {
                 return response.json().then((releases) => {
                     this.releases = releases.map((release) => {
-                        release.changes = release.body.split('\n').map((line) => line.replace('-', '').replace('*', '').trim());
+                        release.changes = release.body.split('\n').map((line) => line.replace(/[-*]/g, '').trim());
                         return release;
                     });
                 });
