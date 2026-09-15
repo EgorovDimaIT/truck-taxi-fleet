@@ -1,0 +1,60 @@
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.7927</td><td bgcolor='#eeeeec' align='right'>468888</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'vendor/laravel/octane/bin/bootstrap.php</font> )</td><td title='vendor/laravel/octane/bin/frankenphp-worker.php' bgcolor='#eeeeec'>.../frankenphp-worker.php<b>:</b>21</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.7927</td><td bgcolor='#eeeeec' align='right'>469664</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'vendor/autoload.php</font> )</td><td title='vendor/laravel/octane/bin/bootstrap.php' bgcolor='#eeeeec'>.../bootstrap.php<b>:</b>46</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.7927</td><td bgcolor='#eeeeec' align='right'>572064</td><td bgcolor='#eeeeec'>ComposerAutoloaderInit848c0bd85a99bc1dd6c16c0f276b04c6::getLoader( )</td><td title='vendor/autoload.php' bgcolor='#eeeeec'>.../autoload.php<b>:</b>22</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>341.0716</td><td bgcolor='#eeeeec' align='right'>575456</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'vendor/composer/autoload_static.php</font> )</td><td title='vendor/composer/autoload_real.php' bgcolor='#eeeeec'>.../autoload_real.php<b>:</b>31</td></tr>.  
+
+   INFO  </table></font>.  
+
+   INFO  <br />.  
+
+   INFO  <font size='1'><table class='xdebug-error xe-fatal-error' dir='ltr' border='1' cellspacing='0' cellpadding='1'>.  
+
+   INFO  <tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Fatal error: Maximum execution time of 30 seconds exceeded in vendor/composer/autoload_static.php on line <i>53931</i></th></tr>.  
+
+   INFO  <tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>.  
+
+   INFO  <tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0001</td><td bgcolor='#eeeeec' align='right'>459272</td><td bgcolor='#eeeeec'>{main}( )</td><td title='public/frankenphp-worker.php' bgcolor='#eeeeec'>.../frankenphp-worker.php<b>:</b>0</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0001</td><td bgcolor='#eeeeec' align='right'>468192</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'vendor/laravel/octane/bin/frankenphp-worker.php</font> )</td><td title='public/frankenphp-worker.php' bgcolor='#eeeeec'>.../frankenphp-worker.php<b>:</b>7</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0001</td><td bgcolor='#eeeeec' align='right'>468888</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'vendor/laravel/octane/bin/bootstrap.php</font> )</td><td title='vendor/laravel/octane/bin/frankenphp-worker.php' bgcolor='#eeeeec'>.../frankenphp-worker.php<b>:</b>21</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0002</td><td bgcolor='#eeeeec' align='right'>469664</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'vendor/autoload.php</font> )</td><td title='vendor/laravel/octane/bin/bootstrap.php' bgcolor='#eeeeec'>.../bootstrap.php<b>:</b>46</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0002</td><td bgcolor='#eeeeec' align='right'>572064</td><td bgcolor='#eeeeec'>ComposerAutoloaderInit848c0bd85a99bc1dd6c16c0f276b04c6::getLoader( )</td><td title='vendor/autoload.php' bgcolor='#eeeeec'>.../autoload.php<b>:</b>22</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>352.2863</td><td bgcolor='#eeeeec' align='right'>575456</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'vendor/composer/autoload_static.php</font> )</td><td title='vendor/composer/autoload_real.php' bgcolor='#eeeeec'>.../autoload_real.php<b>:</b>31</td></tr>.  
+
+   INFO  </table></font>.  
+
+   INFO  <br />.  
+
+   INFO  <font size='1'><table class='xdebug-error xe-fatal-error' dir='ltr' border='1' cellspacing='0' cellpadding='1'>.  
+
+   INFO  <tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Fatal error: Maximum execution time of 30 seconds exceeded in vendor/composer/autoload_static.php on line <i>53931</i></th></tr>.  
+
+   INFO  <tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>.  
+
+   INFO  <tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.4280</td><td bgcolor='#eeeeec' align='right'>459272</td><td bgcolor='#eeeeec'>{main}( )</td><td title='public/frankenphp-worker.php' bgcolor='#eeeeec'>.../frankenphp-worker.php<b>:</b>0</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.4280</td><td bgcolor='#eeeeec' align='right'>468192</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'vendor/laravel/octane/bin/frankenphp-worker.php</font> )</td><td title='public/frankenphp-worker.php' bgcolor='#eeeeec'>.../frankenphp-worker.php<b>:</b>7</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.4281</td><td bgcolor='#eeeeec' align='right'>468888</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'vendor/laravel/octane/bin/bootstrap.php</font> )</td><td title='vendor/laravel/octane/bin/frankenphp-worker.php' bgcolor='#eeeeec'>.../frankenphp-worker.php<b>:</b>21</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.4281</td><td bgcolor='#eeeeec' align='right'>469664</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'vendor/autoload.php</font> )</td><td title='vendor/laravel/octane/bin/bootstrap.php' bgcolor='#eeeeec'>.../bootstrap.php<b>:</b>46</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.4281</td><td bgcolor='#eeeeec' align='right'>572064</td><td bgcolor='#eeeeec'>ComposerAutoloaderInit848c0bd85a99bc1dd6c16c0f276b04c6::getLoader( )</td><td title='vendor/autoload.php' bgcolor='#eeeeec'>.../autoload.php<b>:</b>22</td></tr>.  
+
+   INFO  <tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>351.7493</td><td bgcolor='#eeeeec' align='right'>575456</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'vendor/composer/autoload_static.php</font> )</td><td title='vendor/composer/autoload_real.php' bgcolor='#eeeeec'>.../autoload_real.php<b>:</b>31</td></tr>.  
+
+   INFO  </table></font>.  
+
+   INFO  Error: loading initial config: loading new config: frankenphp app module: start: failed to initialize workers: too many consecutive failures: worker public/frankenphp-worker.php has not reached frankenphp_handle_request().  
+

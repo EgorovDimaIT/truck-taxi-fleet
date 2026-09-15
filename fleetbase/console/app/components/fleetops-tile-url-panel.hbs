@@ -1,0 +1,31 @@
+<ContentPanel @title="Leaflet Tile Source" @open={{true}} @wrapperClass="bordered-classic">
+    {{#if this.isLoading}}
+        <div class="flex items-center justify-center py-8">
+            <Spinner />
+        </div>
+    {{else}}
+        <InputGroup @name="Leaflet Tile URL" @helpText="Custom XYZ tile template, e.g. https://tile.openstreetmap.org/{z}/{x}/{y}.png. Leave blank to use the default.">
+            <input
+                type="text"
+                class="form-input w-full flex-1"
+                placeholder="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+                value={{this.tileUrl}}
+                {{on "input" this.updateTileUrl}}
+            />
+        </InputGroup>
+
+        <InputGroup @name="Leaflet Dark Tile URL" @helpText="Optional tile template used when the console is in dark mode.">
+            <input
+                type="text"
+                class="form-input w-full flex-1"
+                placeholder="https://tile.example.com/dark/{z}/{x}/{y}.png"
+                value={{this.darkTileUrl}}
+                {{on "input" this.updateDarkTileUrl}}
+            />
+        </InputGroup>
+
+        <div class="flex justify-end">
+            <Button @type="primary" @size="sm" @icon="save" @text="Save Tile URL" @onClick={{this.save}} @isLoading={{this.isSaving}} @disabled={{this.isSaving}} />
+        </div>
+    {{/if}}
+</ContentPanel>

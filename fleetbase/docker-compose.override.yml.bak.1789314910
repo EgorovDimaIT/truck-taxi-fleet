@@ -1,0 +1,111 @@
+services:
+  application:
+    environment:
+      APP_KEY: "base64:SMmRPzniLru23zRi/vpeyfjsxFsEvXVGudrDfsNInL0="
+      APP_NAME: "Fleetbase"
+      APP_URL: "http://75.119.131.94:18080"
+      CONSOLE_HOST: "http://75.119.131.94:8888"
+      ENVIRONMENT: "Production"
+      # --- production hardening (values below fixed 2026-09-12, secrets themselves unchanged) ---
+      APP_ENV: "production"
+      APP_DEBUG: "false"
+      LOG_CHANNEL: "stdout"
+      LOG_LEVEL: "info"
+      XDEBUG_MODE: "off"
+      SESSION_DRIVER: "redis"
+      FILESYSTEM_DRIVER: "gcs"
+      GOOGLE_CLOUD_PROJECT_ID: "fleetbase-f2d4d"
+      GOOGLE_CLOUD_KEY_FILE: "/fleetbase/api/storage/app/firebase-adminsdk.json"
+      GOOGLE_CLOUD_STORAGE_BUCKET: "fleetbase-f2d4d.appspot.com"
+      FIREBASE_CREDENTIALS: "/fleetbase/api/storage/app/firebase-adminsdk.json"
+      # --- end production hardening ---
+      DATABASE_URL: "mysql://fleetbase:66c023fb48a585f7354e6b27aeda42c8a9458e1f@database/fleetbase"
+      SESSION_DOMAIN: "75.119.131.94"
+      MAIL_MAILER: "log"
+      OSRM_HOST: "http://osrm:5000"
+    volumes:
+      - ./api/config/sms.php:/fleetbase/api/config/sms.php
+      - ./api/config/services.php:/fleetbase/api/config/services.php
+      - ./api/config/filesystems.php:/fleetbase/api/config/filesystems.php
+      - ./api/app/Http/Controllers/TraccarProxyController.php:/fleetbase/api/app/Http/Controllers/TraccarProxyController.php
+      - ./api/app/Providers/RouteServiceProvider.php:/fleetbase/api/app/Providers/RouteServiceProvider.php
+      - ./packages/fleetops/server/src/Http/Controllers/Internal/v1/SettingController.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/src/Http/Controllers/Internal/v1/SettingController.php
+      - ./packages/ledger/server/src/Http/Controllers/Internal/v1/SettingController.php:/fleetbase/api/vendor/fleetbase/ledger-api/server/src/Http/Controllers/Internal/v1/SettingController.php
+      - ./packages/fleetops/server/config/telematics.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/config/telematics.php
+      - ./packages/fleetops/server/src/Support/Telematics/Providers/TraccarProvider.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/src/Support/Telematics/Providers/TraccarProvider.php
+      - ./packages/fleetops/server/src/Models/Vehicle.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/src/Models/Vehicle.php
+      - ./packages/fleetops/server/src/Support/Telematics/TelematicService.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/src/Support/Telematics/TelematicService.php
+      - ./packages/fleetops/server/src/Http/Controllers/Api/v1/VehicleController.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/src/Http/Controllers/Api/v1/VehicleController.php
+      - ./packages/fleetops/server/src/Http/Controllers/Api/v1/DriverController.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/src/Http/Controllers/Api/v1/DriverController.php
+      - ./packages/fleetops/server/src/Http/Controllers/Api/v1/CustomerController.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/src/Http/Controllers/Api/v1/CustomerController.php
+      - ./packages/fleetops/server/src/Support/OSRM.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/src/Support/OSRM.php
+      - ./packages/fleetops/server/src/Tracking/TrackingIntelligenceService.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/src/Tracking/TrackingIntelligenceService.php
+      - ./packages/fleetops/server/src/Support/OrderTracker.php:/fleetbase/api/vendor/fleetbase/fleetops-api/server/src/Support/OrderTracker.php
+      - ./packages/core-api/src/Listeners/SendResourceLifecycleWebhook.php:/fleetbase/api/vendor/fleetbase/core-api/src/Listeners/SendResourceLifecycleWebhook.php
+      - ./api/storage/app/public:/fleetbase/api/public/storage
+    depends_on:
+      - telegram-relay
+
+  queue:
+    environment:
+      DATABASE_URL: "mysql://fleetbase:66c023fb48a585f7354e6b27aeda42c8a9458e1f@database/fleetbase"
+      APP_ENV: "production"
+      APP_DEBUG: "false"
+      LOG_LEVEL: "info"
+      XDEBUG_MODE: "off"
+      SESSION_DRIVER: "redis"
+      FILESYSTEM_DRIVER: "gcs"
+      GOOGLE_CLOUD_PROJECT_ID: "fleetbase-f2d4d"
+      GOOGLE_CLOUD_KEY_FILE: "/fleetbase/api/storage/app/firebase-adminsdk.json"
+      GOOGLE_CLOUD_STORAGE_BUCKET: "fleetbase-f2d4d.appspot.com"
+    volumes:
+      - ./packages/core-api/src/Listeners/SendResourceLifecycleWebhook.php:/fleetbase/api/vendor/fleetbase/core-api/src/Listeners/SendResourceLifecycleWebhook.php
+      - ./fleetbase-f2d4d-firebase-adminsdk-fbsvc-e7fb2a9fdb.json:/fleetbase/api/storage/app/firebase-adminsdk.json:ro
+
+  scheduler:
+    environment:
+      DATABASE_URL: "mysql://fleetbase:66c023fb48a585f7354e6b27aeda42c8a9458e1f@database/fleetbase"
+      APP_ENV: "production"
+      APP_DEBUG: "false"
+      LOG_LEVEL: "info"
+      XDEBUG_MODE: "off"
+    healthcheck:
+      disable: true
+
+  telegram-relay:
+    build:
+      context: ./docker/telegram-relay
+    restart: unless-stopped
+    environment:
+      TELEGRAM_BOT_TOKEN: "7007988490:AAGVDKNgPJDIosFPezHa9v_p-iQ57H5rCqM"
+      TELEGRAM_TEST_PHONE: "+380674105077"
+      TELEGRAM_TEST_CHAT_ID: "1011966727"
+      PORT: "9000"
+      PYTHONUNBUFFERED: "1"
+
+  socket:
+    environment:
+      SOCKETCLUSTER_OPTIONS: "{\"origins\":\"http://localhost:*,https://localhost:*,ws://localhost:*,wss://localhost:*,http://75.119.131.94:*,https://75.119.131.94:*,ws://75.119.131.94:*,wss://75.119.131.94:*\"}"
+
+  database:
+    environment:
+      MYSQL_ROOT_PASSWORD: "00c6ca05afb9c22fb7f5ec0d8c57a12b7441ccbd"
+      MYSQL_DATABASE: "fleetbase"
+      MYSQL_USER: "fleetbase"
+      MYSQL_PASSWORD: "66c023fb48a585f7354e6b27aeda42c8a9458e1f"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+
+  osrm:
+    image: ghcr.io/project-osrm/osrm-backend:latest
+    restart: unless-stopped
+    command: osrm-routed --algorithm mld --max-table-size 100 /data/ukraine-latest.osrm
+    volumes:
+      - ./docker/osrm/data:/data
+    ports:
+      - "5000:5000"
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/5000"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s

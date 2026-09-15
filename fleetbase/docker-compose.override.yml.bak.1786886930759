@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  application:
+    environment:
+      APP_KEY: base64:OElwbHlMckF0U202VkNHZEx6a3p3bTlWckF0U202VkM=
+      APP_NAME: Fleetbase
+      APP_URL: "http://localhost:8000"
+      CONSOLE_HOST: "http://localhost:4200"
+      ENVIRONMENT: "development"
+      APP_DEBUG: "true"
+      DATABASE_URL: "mysql://fleetbase:fleetbase_secret@database/fleetbase"
+      SESSION_DOMAIN: "localhost"
+      SOCKETCLUSTER_OPTIONS: '{"origins":"http://localhost:*,https://localhost:*,ws://localhost:*,wss://localhost:*"}'
+  socket:
+    environment:
+      SOCKETCLUSTER_OPTIONS: '{"origins":"http://localhost:*,https://localhost:*,ws://localhost:*,wss://localhost:*"}'
+  database:
+    environment:
+      MYSQL_ROOT_PASSWORD: "fleetbase_root_secret"
+      MYSQL_DATABASE: "fleetbase"
+      MYSQL_USER: "fleetbase"
+      MYSQL_PASSWORD: "fleetbase_secret"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"

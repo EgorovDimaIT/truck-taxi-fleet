@@ -1,0 +1,6 @@
+{
+  "API_HOST": "https://truck-taxi.com",
+  "SOCKETCLUSTER_HOST": "truck-taxi.com",
+  "SOCKETCLUSTER_PORT": 443,
+  "SOCKETCLUSTER_SECURE": true
+}

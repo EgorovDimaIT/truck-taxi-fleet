@@ -1,0 +1,32 @@
+<div class="relative w-full h-full" ...attributes>
+    {{#if this.errorMessage}}
+        <div class="absolute top-2 left-2 z-[1000] bg-red-50 border border-red-200 text-red-700 text-xs px-3 py-2 rounded-md shadow-sm">
+            {{this.errorMessage}}
+            <button type="button" class="ml-2 underline" {{on "click" this.refresh}}>Retry</button>
+        </div>
+    {{/if}}
+
+    {{#if this.isLoading}}
+        <div class="absolute inset-0 flex items-center justify-center z-[1000] bg-white/60">
+            <Spinner />
+        </div>
+    {{/if}}
+
+    <LeafletMap @lat={{this.lat}} @lng={{this.lng}} @zoom={{this.zoom}} class="w-full h-full" as |layers|>
+        <layers.tile-layer @url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" @attribution="&copy; OpenStreetMap contributors" />
+
+        {{#each this.positions as |position|}}
+            <layers.marker @location={{array position.lat position.lng}} @title={{position.name}}>
+                <div class="text-xs">
+                    <div class="font-semibold">{{position.name}}</div>
+                    <div>Speed: {{position.speed}} km/h</div>
+                    <div>Updated: {{position.fixTime}}</div>
+                </div>
+            </layers.marker>
+        {{/each}}
+    </LeafletMap>
+
+    <div class="absolute bottom-2 right-2 z-[1000] bg-white shadow-sm rounded-md px-3 py-1 text-xs text-gray-600">
+        {{this.positions.length}} device(s) live &middot; updates every 10s
+    </div>
+</div>

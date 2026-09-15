@@ -1,0 +1,19 @@
+<Modal::Default @modalIsOpened={{@modalIsOpened}} @options={{@options}} @confirm={{@onConfirm}} @decline={{@onDecline}}>
+    <div class="fleetbase-leaflet-map-container">
+        <LeafletMap class="map-height-base" @lat={{@options.latitude}} @lng={{@options.longitude}} @zoom={{12}} as |layers|>
+            <layers.tile @url="https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZWdvcm92LTE5ODMiLCJhIjoiY21oYzFtMWExMDlxcjJqc2FtdWkwcHF0aSJ9.wPjAUFKC4nPIQxhQ_x2QuA" @attribution="© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>" />
+
+            <layers.marker @icon={{@options.icon}} @location={{point-to-coordinates @options.location}} @riseOnHover={{true}} as |marker|>
+                <marker.popup @maxWidth="500" @minWidth="180">
+                    {{#if @options.popupText}}
+                        <div>{{@options.popupText}}</div>
+                    {{/if}}
+                    <div>{{format-point @options.location}}</div>
+                </marker.popup>
+                {{#if @options.tooltip}}
+                    <marker.tooltip @permanent={{false}} @sticky={{true}} @direction="top">{{@options.tooltip}}</marker.tooltip>
+                {{/if}}
+            </layers.marker>
+        </LeafletMap>
+    </div>
+</Modal::Default>

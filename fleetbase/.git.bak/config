@@ -1,0 +1,55 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/fleetbase/fleetbase.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+	vscode-merge-base = origin/main
+[submodule "packages/ai"]
+	active = true
+	url = git@github.com:fleetbase/ai.git
+[submodule "packages/core-api"]
+	active = true
+	url = git@github.com:fleetbase/core-api.git
+[submodule "packages/customer-portal"]
+	active = true
+	url = git@github.com:fleetbase/customer-portal.git
+[submodule "packages/dev-engine"]
+	active = true
+	url = git@github.com:fleetbase/dev-engine.git
+[submodule "packages/ember-core"]
+	active = true
+	url = git@github.com:fleetbase/ember-core.git
+[submodule "packages/ember-ui"]
+	active = true
+	url = git@github.com:fleetbase/ember-ui.git
+[submodule "packages/fleetbase-extensions-indexer"]
+	active = true
+	url = git@github.com:fleetbase/fleetbase-extensions-indexer.git
+[submodule "packages/fleetops-data"]
+	active = true
+	url = git@github.com:fleetbase/fleetops-data.git
+[submodule "packages/iam-engine"]
+	active = true
+	url = git@github.com:fleetbase/iam-engine.git
+[submodule "packages/ledger"]
+	active = true
+	url = git@github.com:fleetbase/ledger.git
+[submodule "packages/pallet"]
+	active = true
+	url = git@github.com:fleetbase/pallet.git
+[submodule "packages/registry-bridge"]
+	active = true
+	url = git@github.com:fleetbase/registry-bridge.git
+[submodule "packages/fleetops"]
+	active = true
+	url = git@github.com:fleetbase/fleetops.git
+[submodule "packages/storefront"]
+	active = true
+	url = git@github.com:fleetbase/storefront.git
